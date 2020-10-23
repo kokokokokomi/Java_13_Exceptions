@@ -7,6 +7,7 @@ public class TShirt extends Product {
     private String size;
 
     public TShirt() { super(); }
+
     public TShirt(int id, String name, int price, String color, String size) {
         super(id, name, price);
         this.color = color;

@@ -14,18 +14,7 @@ public class ProductRepository {
         items = tmp;
     }
 
-    public Product[] findAll() {
-        return items;
-    }
-
-    public Product findById(int id) {
-        for (Product item : items) {
-            if (item.getId() == id) {
-                return item;
-            }
-        }
-        return null;
-    }
+    public Product[] findAll() { return items; }
 
     public void removeById(int id) {
         int length = items.length - 1;
@@ -38,5 +27,15 @@ public class ProductRepository {
             }
         }
         items = tmp;
+        System.out.println("repo done"); // for demo only
     }
+
+    //public Product findById(int id) {
+    //    for (Product item : items) {
+    //        if (item.getId() == id) {
+    //            return item;
+    //        }
+    //    }
+    //    return null;
+    //}
 }
