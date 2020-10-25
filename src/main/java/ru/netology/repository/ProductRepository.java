@@ -30,12 +30,12 @@ public class ProductRepository {
         System.out.println("repo done"); // for demo only
     }
 
-    //public Product findById(int id) {
-    //    for (Product item : items) {
-    //        if (item.getId() == id) {
-    //            return item;
-    //        }
-    //    }
-    //    return null;
-    //}
+    public Product findById(int id) {
+        for (Product item : items) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
 }
