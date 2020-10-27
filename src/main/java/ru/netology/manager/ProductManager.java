@@ -5,7 +5,9 @@ import ru.netology.repository.ProductRepository;
 public class ProductManager {
     private ProductRepository repository;
 
-    public ProductManager (ProductRepository repository) { this.repository = repository; }
+    public ProductManager(ProductRepository repository) {
+        this.repository = repository;
+    }
 
     public Product[] getAll() {
         Product[] items = repository.findAll();
@@ -17,11 +19,13 @@ public class ProductManager {
         return result;
     }
 
-    public void add(Product item) { repository.save(item); }
+    public void add(Product item) {
+        repository.save(item);
+    }
 
     public void removeById(int id) {
         repository.removeById(id);
-        System.out.println("manager done"); // for demo only
+        System.out.println("manager done");
     }
 }
 
